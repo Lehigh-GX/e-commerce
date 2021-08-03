@@ -1,5 +1,5 @@
 import "./App.css";
-import HomePage from "./Components/homepage/homePage.jsx";
+import HomePage from "./Pages/homepage/homePage.jsx";
 function App() {
   return (
     <div className="App">
