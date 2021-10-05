@@ -1,6 +1,5 @@
 import React from "react";
 import "./collection.scss";
-// eslint-disable-next-line
 import CollectionItem from "../../Components/collection-item/collection-item";
 import { selectCollection } from "../../redux/shop/shop.selector";
 import { connect } from "react-redux";
