@@ -1,8 +1,11 @@
 import { createStore, applyMiddleware, compose } from "redux";
+import { persistStore } from "redux-persist";
+
 import logger from "redux-logger";
 import rootReducer from "../root-reducer";
 const middleWare = [logger];
-const store = createStore(
+
+export const store = createStore(
   rootReducer,
   compose(
     // window.__REDUX_DEVTOOLS_EXTENSION__ &&
@@ -10,5 +13,6 @@ const store = createStore(
     applyMiddleware(...middleWare)
   )
 );
-
-export default store;
+export const persistor = persistStore(store);
+// eslint-disable-next-line
+export default { store, persistor };
